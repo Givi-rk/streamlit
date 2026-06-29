@@ -6,11 +6,10 @@ def connection():
             host='localhost',
             user='root',
             password='',
-            database='assignment_management_system'
+            database='students_database'
         )
         cursor=conn.cursor()
         return conn,cursor
     except mysql.connector.Error as e:
-        st.error(f"Database Error:",{e})
+        st.error("Database Error:",e)
         return None,None
-    
